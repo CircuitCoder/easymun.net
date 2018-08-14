@@ -1,0 +1,152 @@
+/* Fixes */
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: Helvetica, Arial, 'Source Han Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.head-container {
+  padding: 100px 60px;
+  position: relative;
+}
+
+.head-background {
+  background-image: url(head.jpg);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-size: cover;
+
+  z-index: 0;
+
+  filter: grayscale(0.8) opacity(.3);
+
+  background-position: 50% 60%;
+}
+
+.head {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  max-width: 700px;
+  margin: auto;
+
+  z-index: 1;
+
+  position: relative;
+}
+
+.slogan {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 100;
+
+  background: linear-gradient(45deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.2) 25%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.2) 75%);
+  background-size: 80px 80px;
+  padding: 10px 20px;
+  color: rgba(0,0,0,.7);
+
+  font-variant: small-caps;
+}
+
+.brand {
+  background: linear-gradient(45deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.2) 25%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.2) 75%);
+  background-size: 80px 80px;
+  padding: 10px 20px;
+  padding-bottom: 0;
+
+  background-position: 0 0;
+  font-size: 64px;
+  line-height: 70px;
+  font-weight: 900;
+}
+
+.container {
+  padding: 0 60px;
+}
+
+.products {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.product {
+  margin: 20px 0;
+  height: 320px;
+
+  position: relative;
+}
+
+.icon {
+  height: 320px;
+  width: 320px;
+}
+
+.name {
+  font-size: 36px;
+  position: absolute;
+  left: 200px;
+  top: 160px;
+  background: linear-gradient(45deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.2) 25%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.2) 75%);
+  background-size: 80px 80px;
+
+  font-weight: 900;
+
+  padding: 10px;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 24px;
+
+  background: linear-gradient(45deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.1) 25%, rgba(0,0,0,.2) 25%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.1) 50%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.2) 75%);
+  background-size: 80px 80px;
+
+  background-position: 0 40px;
+
+  display: inline-block;
+  padding: 5px 10px;
+
+  position: absolute;
+  left: 200px;
+  top: 120px;
+
+  font-weight: 100;
+}
+
+.product {
+  color: rgba(0,0,0,.7);
+  cursor: pointer;
+}
+
+.product div {
+  transition: background-position .2s ease;
+}
+
+.product:hover {
+  color: rgba(0,0,0,1);
+}
+
+.product:hover .name {
+  background-position: 0 -40px;
+}
+
+.product:hover .desc {
+  background-position: 0 0px;
+}
