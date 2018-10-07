@@ -76,8 +76,6 @@ function bootstrap() {
       return 0;
     });
 
-    console.log(versionPtr);
-
     latestStr = `v${versionPtr[0].join('.')}`;
 
     document.querySelector('.ver-hint').innerHTML = `${latestStr} ${OSName[getOS()]}`;
@@ -105,6 +103,7 @@ function bootstrap() {
 }
 
 function downloadDefault() {
+  if(!latestStr) return;
   download(`Console-Lite-${latestStr}-${getOS()}.${Suffix[getOS()]}`);
 }
 
